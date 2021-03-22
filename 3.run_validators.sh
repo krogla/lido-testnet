@@ -4,7 +4,7 @@ source ./.env
 set -e +u
 set -o pipefail
 
-docker run -it --rm -v "$(pwd):/data" -p "127.0.0.1:5062:5062" sigp/lighthouse lighthouse \
+docker run -d --rm -v "$(pwd):/data" -p "127.0.0.1:5062:5062" sigp/lighthouse lighthouse \
     validator_client \
     --http \
     --network pyrmont \
