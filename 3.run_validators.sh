@@ -7,7 +7,11 @@ set -o pipefail
 PORT=${PORT:-5062}
 USER=${USER:-default}
 
-docker run -d --rm --name "validator-$USER" -v "$(pwd):/data" -p "127.0.0.1:$PORT:5062" sigp/lighthouse lighthouse \
+if [ ! -z "$LOCAL" ]; then
+    network="--network host"
+fi
+
+docker run -d --rm --name "validator-$USER" $network -v "$(pwd):/data" -p "127.0.0.1:$PORT:5062" sigp/lighthouse lighthouse \
     validator_client \
     --http \
     --network prater \
