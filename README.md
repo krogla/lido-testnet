@@ -13,7 +13,7 @@ Set of scripts to generate 3 validator keys from predefined mnemonic and run `li
 ## usage
 
 - copy `.env.example` to `.env`
-- update values in `.env`
+- update values in `.env` ()
 - change storage password in `validators.pass` if need
 - run scripts in order: [./1.gen_keys.sh](1.gen_keys.sh) -> [./2.import_keys.sh](2.import_keys.sh) -> [./3.run_validators.sh](3.run_validators.sh)
 
