@@ -6,7 +6,7 @@ set -o pipefail
 
 docker run -it --rm -v "$(pwd):/data" sigp/lighthouse lighthouse \
     account validator import \
-    --network pyrmont \
+    --network prater \
     --reuse-password \
     --datadir "/data" \
     --directory "/data/validator_keys" \
