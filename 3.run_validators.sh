@@ -14,7 +14,7 @@ fi
 docker run -d --name "validator-$USER" $network -v "$(pwd):/data" -p "127.0.0.1:$PORT:$PORT" sigp/lighthouse lighthouse \
     validator_client \
     --http \
-    --http-port $PORT
+    --http-port $PORT \
     --network prater \
     --init-slashing-protection \
     --datadir "/data" \
