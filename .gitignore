@@ -1,3 +1,4 @@
 .env
+.venv
 /validator_keys
 /validators
