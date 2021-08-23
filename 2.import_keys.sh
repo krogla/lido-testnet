@@ -4,7 +4,9 @@ source ./.env
 set -e +u
 set -o pipefail
 
-docker run -it --rm -v "$(pwd):/data" sigp/lighthouse lighthouse \
+docker run -it --rm --pull "always" \
+    -v "$(pwd):/data" \
+    sigp/lighthouse:latest lighthouse \
     account validator import \
     --network prater \
     --reuse-password \
